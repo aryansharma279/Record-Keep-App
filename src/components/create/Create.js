@@ -19,12 +19,12 @@ const Create = () => {
     setForm(form);
     setForm(emp);
   };
-  const removeItem = (i) => {
-    console.log(data);
-    data.splice(i, 1);
-    console.log(data);
-    setData([...data]);
-  };
+  // const removeItem = (i) => {
+  //   console.log(data);
+  //   data.splice(i, 1);
+  //   console.log(data);
+  //   setData([...data]);
+  // };
   return (
     <div className="inputs">
       <Stack direction="row" spacing={2}>
@@ -57,7 +57,7 @@ const Create = () => {
         </div>
         {data.map((element, index) => {
           return (
-            <Display {...element} key={index} index={index} />
+            <Display {...element} key={index} index={index} data={data} setData={setData} />
               )
         })
         }
