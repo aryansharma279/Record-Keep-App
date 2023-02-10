@@ -19,6 +19,9 @@ const Create = () => {
     setForm(form);
     setForm(emp);
   };
+  const handleKey = (e) => {
+      e.key =='Enter'? addData(): console.log(e.key);
+  }
   // const removeItem = (i) => {
   //   console.log(data);
   //   data.splice(i, 1);
@@ -35,6 +38,7 @@ const Create = () => {
           id="standard-basic"
           label="Name "
           variant="standard"
+          onKeyPress={(e)=> handleKey(e)}
         />
         <TextField
           type="email"
@@ -44,6 +48,7 @@ const Create = () => {
           id="standard-basic"
           label="Email"
           variant="standard"
+          onKeyPress={(e)=> handleKey(e)}
         />
         <Button variant="contained" onClick={addData} color="success">
           <AddIcon />
