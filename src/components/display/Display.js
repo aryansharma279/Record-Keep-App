@@ -8,7 +8,7 @@ const Display = ({ name, email,data, setData, index }) => {
       setData([...data]);
   }
   return (
-    <div className="outputs">
+    <div className="outputs"  draggable >
       <h4>{name}</h4>
       <h4>{email}</h4>
       <Button variant="contained" color="error" onClick={()=> removeItem(index)}>
